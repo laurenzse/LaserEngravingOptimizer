@@ -10,6 +10,7 @@ For more background information, please view this [post](https://laurenzseidel.c
 
 - a laser cutter/engraving
 - engraving material for the initial calibration gauge and your photo
+- for better results: a flatbed scanner
 
 ## Setup of the software
 
@@ -38,6 +39,8 @@ python create_calibration_image.py 400 6 6
 
 >> Output: calibration_gauge.png
 ```
+
+![](./sample_images/calibration_image.png?raw=true)
 
 Before engraving this calibration gauge, find the settings on your laser cutter/engraver that produce the clearest black for a full black PNG. The clearest black should be as dark as possible without producing too many burn marks.
 
@@ -71,9 +74,13 @@ python optimize_color_photo.py 400 6 6 'scanned_gauge.png' 'your_photo.png'
 >> engraving_simulation_result.png
 ```
 
-| original                         | converted into greyscale         | optimized for engraving          | simulation result                |
-|----------------------------------|----------------------------------|----------------------------------|----------------------------------|
-| [](/sample_images/original.jpeg?raw=true) | [](/sample_images/original.jpeg?raw=true) | [](/sample_images/original.jpeg?raw=true) | [](/sample_images/original.jpeg?raw=true) |
+| original                                    | converted into greyscale                    | optimized for engraving                               | simulation result                           |
+|---------------------------------------------|---------------------------------------------|-------------------------------------------------------|---------------------------------------------|
+| ![](./sample_images/original.jpeg?raw=true) | ![](./sample_images/greyscale.jpg?raw=true) | ![](./sample_images/engraving_optimized.png?raw=true) | ![](./sample_images/simulated.png?raw=true) |
+
+After engraving your photo, you may see something like this:
+
+![](./sample_images/result.jpg?raw=true)
 
 ## Simulate result before engraving
 
